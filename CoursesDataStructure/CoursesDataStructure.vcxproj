@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="CoursesDataStructure.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Runtime Analysis.docx" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
