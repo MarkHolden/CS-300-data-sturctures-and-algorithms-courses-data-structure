@@ -34,6 +34,10 @@ public:
 	/// </summary>
 	void PrintCourses() const;
 
-private:
+	/// <summary>
+	/// Print the Course Info for a specific course.
+	/// </summary>
+	/// <param name="courseId">CourseId of the course to print.</param>
+	/// <param name="indent">A string of indention to indent prerequisites recursively. Defaults to an empty string.</param>
 	void PrintCourseInfo(std::string const& courseId, std::string const& indent = "") const;
 };
