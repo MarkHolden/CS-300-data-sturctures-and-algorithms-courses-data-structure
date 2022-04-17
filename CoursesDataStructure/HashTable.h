@@ -6,6 +6,11 @@
 class HashTable {
 public:
 	/// <summary>
+	/// Destructor.
+	/// <summary>
+	~HashTable();
+
+	/// <summary>
 	/// Array of Buckets with a size sufficient to hold all courses without collision(see GetHashCode()).
 	/// </summary>
 	Bucket Buckets[32];

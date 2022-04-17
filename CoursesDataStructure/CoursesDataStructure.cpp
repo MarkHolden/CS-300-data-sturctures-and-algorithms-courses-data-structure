@@ -54,6 +54,10 @@ int main() {
             PrintCourseInfo(hashTable);
             break;
 
+        case 0:
+            cout << "Thank you for using the course planner!\n";
+            delete hashTable;
+
         default:
             break;
         }

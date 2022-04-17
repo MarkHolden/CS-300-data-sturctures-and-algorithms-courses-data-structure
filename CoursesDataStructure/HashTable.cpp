@@ -14,6 +14,14 @@
 
 using namespace std;
 
+HashTable::~HashTable() {
+    for (int i = 0; i < 32; ++i) {
+        Course* course = Buckets[i].Course;
+        delete course;
+        Buckets[i].Course = nullptr;
+    }
+}
+
 bool HashTable::Exists(string const& courseId) const {
     int hashCode = Course::GetHashCode(courseId);
     return !Buckets[hashCode].IsEmpty();
