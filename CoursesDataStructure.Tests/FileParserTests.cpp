@@ -20,12 +20,12 @@ namespace FileParserTests
             std::string name = "Introduction to Algorithms";
             std::string prereq1 = "CSCI200";
             std::string prereq2 = "MATH201";
-            Course course = FileParser::ParseCourse(courseId + "," + name + "," + prereq1 + "," + prereq2);
-            Assert::AreEqual(courseId, course.CourseId);
-            Assert::AreEqual(name, course.Name);
-            Assert::IsTrue(std::any_of(course.Prerequisites.begin(), course.Prerequisites.end(), [&prereq1](std::string const& p) { return p == prereq1; }));
-            Assert::IsTrue(std::any_of(course.Prerequisites.begin(), course.Prerequisites.end(), [&prereq2](std::string const& p) { return p == prereq2; }));
-            Assert::AreEqual(2, (int)course.Prerequisites.size());
+            Course* course = FileParser::ParseCourse(courseId + "," + name + "," + prereq1 + "," + prereq2);
+            Assert::AreEqual(courseId, course->CourseId);
+            Assert::AreEqual(name, course->Name);
+            Assert::IsTrue(std::any_of(course->Prerequisites.begin(), course->Prerequisites.end(), [&prereq1](std::string const& p) { return p == prereq1; }));
+            Assert::IsTrue(std::any_of(course->Prerequisites.begin(), course->Prerequisites.end(), [&prereq2](std::string const& p) { return p == prereq2; }));
+            Assert::AreEqual(2, (int)course->Prerequisites.size());
         }
 
         TEST_METHOD(ParseCourse_ShouldThrow_WhenLineHasZeroArguments)
