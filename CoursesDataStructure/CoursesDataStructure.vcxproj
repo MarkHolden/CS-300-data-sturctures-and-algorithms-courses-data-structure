@@ -152,6 +152,7 @@
     <ClInclude Include="Course.h" />
     <ClInclude Include="FileParser.h" />
     <ClInclude Include="HashTable.h" />
+    <ClInclude Include="Input.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\courses.txt" />
